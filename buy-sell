@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{   int n=6;
+    int arr[6]={1,5,3,1,2,8};
+    int buy;
+    int sell;
+    int p=0;
+    buy=arr[0];
+    for(int i=1;i<n;i++){
+        //  cout<<buy<<endl;
+        if(arr[i-1]>arr[i]){
+           // cout<<buy<<endl;
+            // buy=arr[i];
+           p=p+(arr[i-1]-buy); 
+           buy=arr[i];
+        //   cout<<arr[i-1];
+           
+        }
+        //cout<<p;
+    }
+    if(buy<arr[n-1]){
+    p=p+(arr[n-1]-buy);
+    // cout<<"hi";
+    }
+    cout<<p;
+    return 0;
+}
